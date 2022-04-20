@@ -29,5 +29,7 @@ TO DO:
 ## Character stuff
 First numbers in txt file are coordinates of top left places, next two numbers are dimensions, and last number is how many animation frames (1 is standing still)
 
+16 x 16 grid
+
 ## Keybindings
 Plus and minus are to zoom in and out
