@@ -7,6 +7,6 @@ namespace Heros {
     
     constexpr int default_speed{8};
     const HeroType nobody{"none", default_speed, 1, std::make_shared<None>(), {}};
-    const HeroType Farven{"elf", 10, 1, std::make_shared<None>(), {}};
+    const HeroType Skelly{"skeleton", 10, 1, std::make_shared<None>(), {}};
     
 }

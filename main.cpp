@@ -6,6 +6,6 @@ int main() {
     Settings settings = read_settings(filename);
     Engine engine{settings};
 
-    engine.create_hero(Heros::Farven);
+    engine.create_hero(Heros::Skelly);
     engine.run();
 }

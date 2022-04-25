@@ -6,3 +6,5 @@ elf 128 0 16 32 4
 knight 128 64 16 32 4
 wizard 128 160 16 32 4
 dragon 128 224 16 32 4
+
+skeleton 368 80 16 16 4

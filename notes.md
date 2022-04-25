@@ -24,6 +24,9 @@ TO DO:
 - Look up shared_ptr in Tour of C++ or C++ reference and make_shared: Wht is the relationship? Where do I specify the type?
 - Look up undordered_map? string & Reaction
 ```Reaction = std::function<std::unique_ptr<Action>()>;```, what is a function?
+- Go through slides again
+- Turn in notes as well
+- MAKE SKELETON CODE OF ACTION AND MOVE OVER THE WEEKEND
 
 
 ## Character stuff
@@ -33,3 +36,6 @@ First numbers in txt file are coordinates of top left places, next two numbers a
 
 ## Keybindings
 Plus and minus are to zoom in and out
+
+## Actions
+- Results are inside action
