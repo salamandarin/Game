@@ -25,17 +25,17 @@ TO DO:
 - Look up undordered_map? string & Reaction
 ```Reaction = std::function<std::unique_ptr<Action>()>;```, what is a function?
 - Go through slides again
-- Turn in notes as well
-- MAKE SKELETON CODE OF ACTION AND MOVE OVER THE WEEKEND
 
 
 ## Character stuff
-First numbers in txt file are coordinates of top left places, next two numbers are dimensions, and last number is how many animation frames (1 is standing still)
-
-16 x 16 grid
+First numbers in txt file are coordinates of top left, next two numbers are dimensions, and last number is how many animation frames (1 is standing still)
 
 ## Keybindings
-Plus and minus are to zoom in and out
 
 ## Actions
 - Results are inside action
+
+
+TO DO 2:
+- Add OpenDoor and CloseDoor actions
+- Edit Move to return an alternative(OpenDoor)
