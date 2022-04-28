@@ -4,9 +4,7 @@
 #include "engine.h"
 
 Move::Move(Vec direction)
-    :direction{direction} {
-        // error handling
-    }
+    :direction{direction} {}
 
 
 Result Move::perform(Engine& engine) {
