@@ -39,3 +39,6 @@ First numbers in txt file are coordinates of top left, next two numbers are dime
 TO DO 2:
 - Add OpenDoor and CloseDoor actions
 - Edit Move to return an alternative(OpenDoor)
+
+
+Speed determines speed of turns
