@@ -14,7 +14,7 @@ Result Move::perform(Engine& engine) {
     actor->change_direction(direction);
 
     Tile& tile = engine.dungeon.tiles(new_position);
-    if (tile.is_door()) {
+    if (tile.is_door() && !tile.walkable) {
         return alternative(OpenDoor{new_position});
     }
 

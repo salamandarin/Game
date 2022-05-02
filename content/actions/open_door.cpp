@@ -8,17 +8,11 @@ OpenDoor::OpenDoor(Vec position) : position{position} {}
 
 Result OpenDoor::perform(Engine& engine) {
     Door& door = engine.dungeon.doors.at(position);
-    if (!door.is_open()) {
-        door.open();
+    door.open();
 
-        Tile& tile = engine.dungeon.tiles(position);
-        tile.walkable = true;
+    Tile& tile = engine.dungeon.tiles(position);
+    tile.walkable = true;
 
-        engine.events.add(UpdateFOV{});
-        return success();
-    }
-    else {
-        actor->move_to(position);
-        return success();
-    }
+    engine.events.add(UpdateFOV{});
+    return success();
 }
