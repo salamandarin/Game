@@ -3,6 +3,7 @@
 #include "actor.h"
 #include "engine.h"
 #include "open_door.h"
+#include "attack.h"
 
 Move::Move(Vec direction)
     :direction{direction} {}
@@ -23,7 +24,8 @@ Result Move::perform(Engine& engine) {
     }
 
     if (tile.actor) {
-        return success(); // alternative(Attack{*tile.actor})
+        return success();
+        // return alternative(Attack{*tile.actor})
         //                                     Actor& actor
     }
 
