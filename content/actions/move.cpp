@@ -23,7 +23,7 @@ Result Move::perform(Engine& engine) {
     }
 
     if (tile.actor) {
-        return failure(); // alternative(Attack{*tile.actor})
+        return success(); // alternative(Attack{*tile.actor})
         //                                     Actor& actor
     }
 
