@@ -9,5 +9,7 @@ int main() {
 
     engine.create_hero(Heros::Skelly);
     engine.create_monster(Monsters::goblin());
+    engine.create_monster(Monsters::slime());
+    engine.create_monster(Monsters::necromancer());
     engine.run();
 }

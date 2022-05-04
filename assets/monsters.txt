@@ -5,6 +5,7 @@ zombie 368 144 16 16 4
 zombie_big 16 270 32 34 4
 
 muddy 368 112 16 16 4
+slime 432 112 16 16 4
 
 skeleton 368 80 16 16 4
 

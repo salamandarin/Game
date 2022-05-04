@@ -34,4 +34,14 @@ namespace Monsters {
         int health = 2;
         return {"goblin", default_speed, health, std::make_shared<None>(), default_behavior};
     }
+
+    MonsterType slime() {
+        int health = 2;
+        return {"slime", default_speed, health, std::make_shared<None>(), default_behavior};
+    }
+
+    MonsterType necromancer() {
+        int health = 3;
+        return {"necromancer", default_speed, health, std::make_shared<None>(), default_behavior};
+    }
 }
