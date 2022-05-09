@@ -6,6 +6,8 @@
 #include "rest.h"
 #include "close_door.h"
 #include "cleaver.h"
+#include "sword.h"
+#include "staff_green.h"
 
 namespace Heros {
     using Reaction = std::function<std::unique_ptr<Action>()>;
@@ -23,5 +25,5 @@ namespace Heros {
     
     constexpr int default_speed{8};
     const HeroType nobody{"none", default_speed, 1, std::make_shared<None>(), key_bindings};
-    const HeroType Skelly{"skeleton", default_speed, 1, std::make_shared<Cleaver>(20), key_bindings};
+    const HeroType Skelly{"skeleton", default_speed, 1, std::make_shared<StaffGreen>(20), key_bindings};
 }

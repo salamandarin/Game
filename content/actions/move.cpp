@@ -24,7 +24,10 @@ Result Move::perform(Engine& engine) {
     }
 
     if (tile.actor) {
-        return alternative(Attack{*actor, *tile.actor});
+        if (tile.actor->team != actor->team) {
+            return alternative(Attack{*actor, *tile.actor});
+        }
+        return failure();
     }
 
     else {
