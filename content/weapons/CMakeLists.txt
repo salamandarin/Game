@@ -3,6 +3,7 @@ add_library(weapons
   cleaver.cpp
   sword.cpp
   staff_green.cpp
+  staff_red.cpp
   )
 
 target_include_directories(weapons PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
