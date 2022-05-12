@@ -7,6 +7,7 @@
 #include "move.h"
 #include "staff_red.h"
 #include "cleaver.h"
+#include "witchcraft.h"
 
 namespace Monsters {
     constexpr int default_speed{8};
@@ -33,17 +34,27 @@ namespace Monsters {
     }
 
     MonsterType goblin() {
-        int health = 2;
+        int health = 15;
         return {"goblin", default_speed, health, std::make_shared<Cleaver>(5), default_behavior};
     }
 
     MonsterType slime() {
-        int health = 2;
+        int health = 15;
         return {"slime", default_speed, health, std::make_shared<None>(), default_behavior};
     }
 
     MonsterType necromancer() {
-        int health = 3;
+        int health = 20;
         return {"necromancer", default_speed, health, std::make_shared<StaffRed>(10), default_behavior};
+    }
+
+    MonsterType demon_big() {
+        int health = 40;
+        return {"demon_big", default_speed, health, std::make_shared<Cleaver>(20), default_behavior};
+    }
+
+    MonsterType scarlet_witch() {
+        int health = 100;
+        return {"scarlet_witch", default_speed, health, std::make_shared<Witchcraft>(50), default_behavior};
     }
 }

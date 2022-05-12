@@ -4,6 +4,7 @@
 #include "engine.h"
 #include "open_door.h"
 #include "attack.h"
+#include "rest.h"
 
 Move::Move(Vec direction)
     :direction{direction} {}
@@ -27,7 +28,7 @@ Result Move::perform(Engine& engine) {
         if (tile.actor->team != actor->team) {
             return alternative(Attack{*actor, *tile.actor});
         }
-        return failure();
+        return alternative(Rest{});
     }
 
     else {

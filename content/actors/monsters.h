@@ -9,4 +9,6 @@ namespace Monsters {
     MonsterType goblin();
     MonsterType slime();
     MonsterType necromancer();
+    MonsterType demon_big();
+    MonsterType scarlet_witch();
 }

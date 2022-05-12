@@ -33,7 +33,6 @@ Swing::Swing(Sprite& sprite, Vec direction, Actor& defender, int damage)
 void Swing::execute(Engine& engine) {
     // Modify the sprite
     sprite.angle += starting_angle + delta * frame_count;
-    // sprite.shift.x += 16;
 }
 
 void Swing::when_done(Engine& engine) {

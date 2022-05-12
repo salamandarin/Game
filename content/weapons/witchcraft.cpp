@@ -1,12 +1,13 @@
-#include "sword.h"
+// Sam Sutton
+#include "witchcraft.h"
 #include "hit.h"
 #include "swing.h"
 
-Sword::Sword(int damage)
-    :Weapon{"sword", damage} {}
+Witchcraft::Witchcraft(int damage)
+    :Weapon{"none", damage} {}
 
 
-void Sword::use(Engine& engine, Actor& attacker, Actor& defender) {
+void Witchcraft::use(Engine& engine, Actor& attacker, Actor& defender) {
     Vec direction = defender.get_position() - attacker.get_position();
     engine.events.add(Swing{sprite, direction, defender, damage});
 }

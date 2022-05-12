@@ -13,7 +13,7 @@ public:
     void when_done(Engine& engine) override;
 private:
     Sprite& sprite; // original
-    Sprite& copy;
+    Sprite copy;
     Vec direction;
     Actor& defender;
     int damage;
