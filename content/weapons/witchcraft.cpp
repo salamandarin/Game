@@ -17,9 +17,8 @@ void Witchcraft::use(Engine& engine, Actor& attacker, Actor& defender) {
     Vec position = attacker.get_position();
 
     if (probability(75)) {
-        Graphics graphics = {"red_magic", 32, 16};
-        Sprite red_magic = graphics.get_sprite("red_magic");
-        engine.events.add(Magic{graphics, red_magic, direction, distance, position, defender, damage});
+        Sprite red_magic = engine.graphics.get_sprite("red_magic");
+        engine.events.add(Magic{red_magic, direction, distance, position, defender, damage});
     }
     if (probability(20)) {
         engine.events.add(TakeWeapon{defender});
