@@ -8,18 +8,16 @@
 
 class Magic : public Event {
 public:
-    Magic(Sprite& sprite, Vec direction, double distance,
-          Vec position, Actor& defender, int damage);
+    Magic(Sprite& sprite, Vec distance, Vec position, Actor& defender, int damage);
 
     void execute(Engine& engine) override;
     void when_done(Engine& engine) override;
 private:
     Sprite& sprite;
-    Vec direction;
-    double distance;
+    Vec distance;
     Vec position;
     Actor& defender;
     int damage;
 
-    double delta;
+    Vec delta;
 };

@@ -11,14 +11,14 @@ Witchcraft::Witchcraft(int damage)
 
 
 void Witchcraft::use(Engine& engine, Actor& attacker, Actor& defender) {
-    Vec direction = defender.get_position() - attacker.get_position();
-    std::vector<Vec> path = engine.dungeon.calculate_path(attacker.get_position(), defender.get_position());
-    double distance = path.size();
+    Vec distance = defender.get_position() - attacker.get_position();
     Vec position = attacker.get_position();
 
     if (probability(75)) {
         Sprite red_magic = engine.graphics.get_sprite("red_magic");
-        engine.events.add(Magic{red_magic, direction, distance, position, defender, damage});
+        red_magic.location = position;
+        // engine.graphics.draw_sprite(position, sprite, 1);
+        engine.events.add(Magic{red_magic, distance, position, defender, damage});
     }
     if (probability(20)) {
         engine.events.add(TakeWeapon{defender});
