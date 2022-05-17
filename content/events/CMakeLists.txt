@@ -3,6 +3,9 @@ add_library(events
   hit.cpp
   die.cpp
   swing.cpp
+  magic.cpp
+  take_weapon.cpp
+  thrust.cpp
   )
 
 target_include_directories(events PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

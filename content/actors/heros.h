@@ -8,6 +8,10 @@
 #include "cleaver.h"
 #include "sword.h"
 #include "staff_green.h"
+#include "staff_red.h"
+#include "witchcraft.h"
+#include "attack.h"
+#include "distance_attack.h"
 
 namespace Heros {
     using Reaction = std::function<std::unique_ptr<Action>()>;
@@ -20,10 +24,11 @@ namespace Heros {
 
     {"R", []() { return std::make_unique<Rest>(); }},
     {"C", []() { return std::make_unique<CloseDoor>(); }},
+    // {"Space", []() { return std::make_unique<DistanceAttack>(); }}
     };
     
     
     constexpr int default_speed{8};
     const HeroType nobody{"none", default_speed, 1, std::make_shared<None>(), key_bindings};
-    const HeroType Skelly{"skeleton", default_speed, 100, std::make_shared<Sword>(25), key_bindings};
+    const HeroType Skelly{"skeleton", default_speed, 1000000, std::make_shared<Sword>(25), key_bindings};
 }

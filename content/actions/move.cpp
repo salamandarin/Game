@@ -26,7 +26,7 @@ Result Move::perform(Engine& engine) {
 
     if (tile.actor) {
         if (tile.actor->team != actor->team) {
-            return alternative(Attack{*actor, *tile.actor});
+            return alternative(Attack{*tile.actor});
         }
         return alternative(Rest{});
     }

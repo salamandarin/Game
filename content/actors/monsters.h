@@ -5,6 +5,8 @@
 
 namespace Monsters {
     std::unique_ptr<Action> default_behavior(Engine& engine, Monster& me);
+    std::unique_ptr<Action> witch_behavior(Engine& engine, Monster& me);
+
 
     MonsterType goblin();
     MonsterType slime();

@@ -3,11 +3,7 @@
 #include "action.h"
 #include "actor.h"
 
-class Attack : public Action {
+class DistanceAttack : public Action {
 public:
-    Attack(Actor& defender);
-
     Result perform(Engine& engine) override;
-private:
-    Actor& defender;
 };
