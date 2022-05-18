@@ -1,14 +1,13 @@
 // Sam Sutton
 #include "witchcraft.h"
+
 #include "hit.h"
-#include "swing.h"
-#include "randomness.h"
 #include "magic.h"
+#include "randomness.h"
+#include "swing.h"
 #include "take_weapon.h"
 
-Witchcraft::Witchcraft(int damage)
-    :Weapon{"none", damage} {}
-
+Witchcraft::Witchcraft(int damage) : Weapon{"none", damage} {}
 
 void Witchcraft::use(Engine& engine, Actor& attacker, Actor& defender) {
     Vec distance = defender.get_position() - attacker.get_position();
@@ -16,8 +15,7 @@ void Witchcraft::use(Engine& engine, Actor& attacker, Actor& defender) {
 
     if (probability(75)) {
         Sprite red_magic = engine.graphics.get_sprite("red_magic");
-        red_magic.location = position;
-        // engine.graphics.draw_sprite(position, sprite, 1);
+        engine.graphics.draw_sprite(position, red_magic, 1);
         engine.events.add(Magic{red_magic, distance, position, defender, damage});
     }
     if (probability(20)) {
