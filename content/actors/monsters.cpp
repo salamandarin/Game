@@ -85,6 +85,6 @@ namespace Monsters {
 
     MonsterType scarlet_witch() {
         int health = 100;
-        return {"scarlet_witch", default_speed, health, std::make_shared<Witchcraft>(50), witch_behavior};
+        return {"scarlet_witch", default_speed, health, std::make_shared<Witchcraft>(10), witch_behavior};
     }
 }

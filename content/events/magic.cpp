@@ -1,47 +1,27 @@
 // Sam Sutton
 #include "magic.h"
+
+#include <cmath>
+
 #include "hit.h"
 
-constexpr int duration = 3;
+constexpr int duration = 2;
 
-Magic::Magic(Sprite& sprite, Vec distance, Vec position, Actor& defender, int damage)
+Magic::Magic(Sprite sprite, Vec distance, Vec position, Actor& defender, int damage)
     :Event{duration}, sprite{sprite}, distance{distance}, position{position},
-    defender{defender}, damage{damage},
-    delta{distance.x / (duration - 1), distance.y / (duration - 1)} {
-        if (distance.x < 0 && distance.y > 0) {
-            sprite.angle = 225;
-        }
-        else if (distance.x == 0 && distance.y > 0) {
-            sprite.angle = 270;
-        }
-        else if (distance.x > 0 && distance.y > 0) {
-            sprite.angle = 315;
-        }
-        else if (distance.x < 0 && distance.y == 0) {
-            sprite.angle = 180;
-        }
-        else if (distance.x > 0 && distance.y == 0) {
-            sprite.angle = 0;
-        }
-        else if (distance.x < 0 && distance.y < 0) {
-            sprite.angle = 135;
-        }
-        else if (distance.x == 0 && distance.y < 0) {
-            sprite.angle = 90;
-        }
-        else {
-            sprite.angle = 45;
-        }
-    }
+    starting_position{position}, defender{defender}, damage{damage},
+    delta{distance.x / (duration - 1), distance.y / (duration - 1)} {}
 
 
+void Magic::execute(Engine& engine) {
+    sprite.angle = (atan2(distance.x, distance.y) * 180 / M_PI) - 90;
 
-void Magic::execute(Engine & engine) {
-    sprite.shift.x += delta.x;
-    sprite.shift.y += delta.y;
+    position.x = starting_position.x + delta.x * frame_count;
+    position.y = starting_position.y + delta.y * frame_count;
+
+    engine.camera.add_overlay(position, sprite);
 }
 
-
-void Magic::when_done(Engine & engine) {
+void Magic::when_done(Engine& engine) {
     engine.events.add(Hit{defender, damage});
 }

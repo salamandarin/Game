@@ -4,7 +4,6 @@ add_library(events
   die.cpp
   swing.cpp
   magic.cpp
-  take_weapon.cpp
   thrust.cpp
   )
 
