@@ -1,9 +1,7 @@
 // Sam Sutton
 #include "magic.h"
-
-#include <cmath>
-
 #include "hit.h"
+#include <cmath>
 
 constexpr int duration = 2;
 

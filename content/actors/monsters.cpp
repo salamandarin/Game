@@ -70,7 +70,7 @@ namespace Monsters {
 
     MonsterType slime() {
         int health = 15;
-        return {"slime", default_speed, health, std::make_shared<None>(), default_behavior};
+        return {"slime", default_speed, health, std::make_shared<Cleaver>(5), default_behavior};
     }
 
     MonsterType necromancer() {
